@@ -4,9 +4,7 @@ cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 420)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
 src2 = cv2.imread("under_the_sea_v2.png")
-# src2 = cv2.resize(src2, (360, 640))
 mask = cv2.imread("mask.png")
-# mask = cv2.resize(mask, (360, 640))
 
 while True:
     success, img = cap.read()
