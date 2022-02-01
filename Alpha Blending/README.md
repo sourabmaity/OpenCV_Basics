@@ -33,11 +33,29 @@ cv2.imshow("Or", or_)
 A bitwise XOR is a binary operation that takes two bit patterns of equal length and performs the logical exclusive OR operation on each pair of corresponding bits. The result in each position is 1 if only one of the bits is 1, but will be 0 if both are 0 or both are 1. In this we perform the comparison of two bits, being 1 if the two bits are different, and 0 if they are the same.
 
 <img src="https://github.com/sourabmaity/OpenCV_Basics/blob/main/Alpha%20Blending/xor.png" >
+<details open>
+<summary>XOR</summary>
+
+```bash
+xor_ = cv2.bitwise_xor(img, mask)
+cv2.imshow("XOR", xor_)
+```
+
+</details>
 
 ### NOT
 The bitwise NOT, or complement, is a unary operation that performs logical negation on each bit, forming the ones' complement of the given binary value. Bits that are 0 become 1, and those that are 1 become 0.
 
 <img src="https://github.com/sourabmaity/OpenCV_Basics/blob/main/Alpha%20Blending/not.png" >
+<details open>
+<summary>NOT</summary>
+
+```bash
+not_ = cv2.bitwise_not(img, mask)
+cv2.imshow("Not", not_)
+```
+
+</details>
 
 ## Mask Image
 <img src="https://github.com/sourabmaity/OpenCV_Basics/blob/main/Alpha%20Blending/mask.png" >
