@@ -19,7 +19,8 @@ while True:
     laplacian = cv2.Laplacian(img, cv2.CV_64F)
 
     # Canny Edges Detection
-    canny = cv2.Canny(image=img_gray, threshold1=100, threshold2=200)
+    img_blur = cv2.GaussianBlur(img_gray, (3, 3), 0)
+    canny = cv2.Canny(image=img_blur, threshold1=100, threshold2=200)
 
     cv2.imshow("SobelX", sobelX)
     cv2.imshow("SobelY", sobelY)
