@@ -47,3 +47,25 @@ img_blur = cv2.GaussianBlur(img_gray, (3, 3), 0)
 canny = cv2.Canny(image=img_blur, threshold1=100, threshold2=200)
 ```
 </details>
+
+### Laplacian Edge Detection
+Unlike the Sobel edge detector, the Laplacian edge detector uses only one kernel. It calculates second order derivatives in a single pass.
+
+The following is the syntax for applying Laplacian edge detection using OpenCV:
+```bash
+Laplacian( src_gray, dst, ddepth, kernel_size, scale, delta, BORDER_DEFAULT );
+```
+The arguments are:
+1. src_gray: The input image.
+2. dst: Destination (output) image
+3. ddepth: Depth of the destination image. Since our input is CV_8U we define ddepth = CV_16S to avoid overflow
+4. kernel_size: The kernel size of the Sobel operator to be applied internally. We use 3 in this example.
+5. scale, delta and BORDER_DEFAULT: We leave them as default values.
+
+<details open>
+<summary>Laplacian Edge Detection</summary>
+
+```bash
+laplacian = cv2.Laplacian(img, cv2.CV_64F)
+```
+</details>
